@@ -1,0 +1,224 @@
+
+/* Provides a base case of "Lobster" font with a wiki background fixed image for the page */
+body {
+    font-family: 'Lobster', sans-serif;
+ 
+}
+
+/* Contains the styling for the div surrounding the large "W" clickable */
+#heading {    
+       
+    display: inline-block;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: -55px;
+    padding-bottom: -5px;
+    text-align: center;
+    margin-bottom: auto;
+    text-decoration: none;
+    border-radius: 20%;
+    color: white;
+    background-color: hotpink;
+    border: 20px solid black;
+    transition: background-color 3s, color 3s, border-color 3s;
+}
+
+/* CSS Values for the "heading" div on hover mode */
+#heading:hover {
+    color: black;
+    background-color: aqua;
+    border-color: white;
+    
+}
+
+/* Styles the submit button */
+.btn {
+    margin: 0.5%;
+    font-size: 1.8em;
+    height: 50px;
+    width: 100px;
+    padding: 0;
+    border-radius: 35%;
+    font-family: 'Roboto', sans-serif;
+    box-shadow: 25px 25px 15px 15px  rgba(0, 0, 0, 0.65); 
+}
+
+/* Styles the big "W" that goes to wikipedia in search of random articles */
+
+#wikiFont {
+    
+    font-size: 9em;
+    font-weight: 900;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+/* Styles the outer "test" div outside the "heading" div*/
+#test {
+    display: inline-block;
+    padding: 20px;
+    margin-bottom: 6px;
+    border-radius: 20%;
+    border: 2px solid black;
+    box-shadow: 25px 25px 15px 15px  rgba(0, 0, 0, 0.65);
+    background-color: aqua;
+    color: black;
+    transition: background-color 3s, color 3s;
+}
+
+
+/* CSS Values for the "test" div on hover mode */
+#test:hover {
+    background-color: hotpink;
+    color: white;
+}
+
+/* Styles the font for each resulting selected wiki output term from the enterd search term*/
+#wikiStyle  a  {
+    text-decoration: none;
+    border: none;
+    outline: none;
+    color: black;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+}
+
+
+/* Styles the font for each wiki description output for the for the entered search term */
+#wikiStyle {
+    color: white;
+    font-size: 2em;
+}
+
+/* Styles the display list for the total wiki output list */
+#output li {
+    
+    list-style-type: none;
+    margin-top: 60px;
+    background-color: cornflowerblue;
+    border-radius: 30px;
+    padding: 20px;
+    box-shadow: 25px 25px 15px 15px  rgba(0, 0, 0, 0.65);      
+}
+
+/* Styles the "input" text into the form*/
+input[placeholder] {
+    font-size: 2.0em;
+    font-family: 'Roboto', sans-serif;
+    height: 50px;
+}
+
+/*This div is the master div, it contains the both the image and the composite button divs named "test", "heading" and "wikifont" respectively  */
+#king {
+    
+    margin-bottom: 50px;
+    margin-top: 40px;
+    display: inline-block;
+    
+}
+/* This div is used to style the wiki icon */
+img#wikiIcon{
+    
+    display: inline-block;
+    position: fixed;
+    
+    left:  340px;
+    top:  100px;
+    
+   /* box-shadow: 25px 25px 15px 15px  rgba(0, 0, 0, 0.65); */
+    border-radius: 50%;
+    
+    animation-duration: 2.25s, 3s, 3s;
+    animation-name: changeShape, spin, changeBoxShadow;
+    animation-iteration-count: infinite, infinite,infinite;
+    animation-direction:alternate, normal, normal;
+    animation-timing-function: linear,linear,linear;
+}
+
+/* Shape altreation for the wiki icon*/
+@keyframes changeShape {
+    
+    from {
+        width: 150px;
+        height: 244px;
+    }
+    
+    to {
+        width: 267px;
+        height: 137px;
+    }
+}
+
+/* Shape alteration for the box shadow so it is always facing the same direction as the wiki sphere rotates */
+@keyframes changeBoxShadow {
+    
+    0% {   
+        box-shadow: 25px  25px 15px 15px  rgba(0, 0, 0, 0.65);
+    }
+    25% {
+        box-shadow: 25px -25px 15px 15px  rgba(0, 0, 0, 0.65);
+    }
+    50% {
+        box-shadow: -25px -25px 15px 15px  rgba(0, 0, 0, 0.65);
+    }
+    75% {
+        box-shadow: -25px  25px 15px 15px  rgba(0, 0, 0, 0.65);
+    }
+    100% {    
+        box-shadow:  25px  25px 15px 15px  rgba(0, 0, 0, 0.65);
+    }
+}
+
+
+
+/* Rotational animtion for the wiki icon  */
+@keyframes spin {
+    0% {
+        transform:rotate(0deg);
+    }
+    25% {
+        transform:rotate(90deg);
+    }
+    50% {
+        transform:rotate(180deg);
+    }
+    75% {
+        transform:rotate(270deg);
+    }
+    100% {
+        transform:rotate(360deg);
+    }
+}
+
+/* Styles title    */
+#fontDiv {
+    margin-top: 100px;
+    text-shadow:  25px  25px 15px rgba(0, 0, 0, 0.65);
+}
+
+#fontDiv h1 {
+    font-size: 5em;
+}
+
+#fontDiv h3 {
+    font-size: 3em;
+}
+
+#fontDiv > * {
+    animation-duration: 2.25s;
+    animation-name: changeSize;
+    animation-iteration-count: infinite;
+    animation-direction:alternate;    
+}
+
+@keyframes changeSize {
+    0% {
+        transform: scale3d(1,1,1);
+    }
+    50% {
+        transform: scale3d(.8,.8,.8);
+    }
+    100% {
+        transform: scale3d(1.2,1.2,1.2);
+    }
+
