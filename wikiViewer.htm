@@ -11,9 +11,7 @@
         <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
         <link rel="stylesheet" href="wikiViewer.css">  
         
-<!-- 
-Comments: Inside the container class the HTML side is divided into three parts, part 1 is a minor div containing the title, part 2 is a master div clalled "king" which contains a wiki image followed by a series of two concentric divs and an h1 heading valled "test", "image and "wikiFont", this entire series is clickable and hyperlinlked to a random wikipedia article, part 3 is the form that after enering a search term inside the form, generates a matching set of wikipedia outputs accompanied by a description of each component and hyperlinked to the appropriate article about each output.
--->    
+    
     </head>
     <body class="container">    
         <div class="text-center">
@@ -21,29 +19,25 @@ Comments: Inside the container class the HTML side is divided into three parts, 
                 <h1 id="titleAdj">Wikipedia API Search</h1>
                 <h3>FCC Front End Development</h3>
             </div>
-            <div id="king"><img id="wikiIcon" src="https://www.wikipedia.org/portal/wikipedia.org/assets/img/Wikipedia-logo-v2.png" width="200px" height="183px" alt="wtf">
-                <!-- The first part is a series of concentric div's the outermost div is set to an id called "test" colored aqua green and contains an inner div set to an id called "heading" which contains a very thick black border and an <h1> element set to an id called "wikiFont", all of which are hyperlinked to the random wikipedia article, the outermost div "teset" is not. When going to hover mode the colors of the "test", "heading", border of "heading, and the "wikiFont" change from aqua, black, pink and black respectively change to pink, white, aqua and white respectively. -->
-                   
+            <div id="king"><img id="wikiIcon" src="https://www.wikipedia.org/portal/wikipedia.org/assets/img/Wikipedia-logo-v2.png" width="200px" height="183px" alt="wtf">   
                 <a href="https://en.wikipedia.org/wiki/Special:Random" target="_blank">
                     <div id="test">
                         <div id="heading">    
                             <h1 id="wikiFont">W</h1>
-                        </div> <!-- This corresponds to div "heading"   -->
+                        </div> 
                         <h3>Click inside for a random article</h3>
-                    </div>  <!-- This corresponds to div "test"   -->
+                    </div>  
                 </a>
-            </div> <!-- This corresponds to the div "king" -->
-        </div> <!-- This corresponds to the div containing the entire 1st part -->
-            <!-- This is the form used to enter the searchTerm data  -->
+            </div> 
+        </div> 
             
-        <input class="form-control" id="searchTerm" placeholder="Enter Search Term">
+            
+        <input class="form-control" id="searchTerm" placeholder="Enter Search Term hit Submit or Press Enter">
         <button id="search" type="button" class="btn btn-primary">submit</button>
-        
-            <!-- This is the output list containing the array of the returned elements from the wikipedia API   -->
         <div id="wikiStyle">
             <ul id="output">
             </ul>
-        </div>  <!--This div corresponds to the wikiStyle id  -->
+        </div>  
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
         <script src="wikiViewer.js"></script>

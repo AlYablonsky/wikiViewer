@@ -31,18 +31,16 @@ var url = "https://en.wikipedia.org/w/api.php?action=opensearch&search=" + searc
                 alert("Error");
             }
             
-        });  // Corresponds to ajax commad
+        });  
     
        
-    });  // Corresponds to click (search )
+    });  
     
-    // Performs submission through the "enter" key.
+    
      $("#searchTerm").keypress(function(e) {
             if(e.which===13){
                 $("#search").click();
             }    
-        })
-    
-        
-});  // corresponds to document ready
+        })   
+});  
     

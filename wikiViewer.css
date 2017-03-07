@@ -9,10 +9,7 @@ body {
 #heading {    
        
     display: inline-block;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: -55px;
-    padding-bottom: -5px;
+	padding:  0 20px 0 20px;
     text-align: center;
     margin-bottom: auto;
     text-decoration: none;
@@ -33,7 +30,7 @@ body {
 
 /* Styles the submit button */
 .btn {
-    margin: 0.5%;
+    margin-top: 20px;
     font-size: 1.8em;
     height: 50px;
     width: 100px;
@@ -124,8 +121,7 @@ img#wikiIcon{
     
     left:  340px;
     top:  100px;
-    
-   /* box-shadow: 25px 25px 15px 15px  rgba(0, 0, 0, 0.65); */
+   
     border-radius: 50%;
     
     animation-duration: 2.25s, 3s, 3s;
@@ -153,19 +149,19 @@ img#wikiIcon{
 @keyframes changeBoxShadow {
     
     0% {   
-        box-shadow: 25px  25px 15px 15px  rgba(0, 0, 0, 0.65);
+        box-shadow: 25px  25px 15px 15px  rgba(0, 0, 0, 0.65), inset 25px 25px 15px 15px gold;
     }
     25% {
-        box-shadow: 25px -25px 15px 15px  rgba(0, 0, 0, 0.65);
+        box-shadow: 25px -25px 15px 15px  rgba(0, 0, 0, 0.65), inset 25px -25px 15px 15px gold;
     }
     50% {
-        box-shadow: -25px -25px 15px 15px  rgba(0, 0, 0, 0.65);
+        box-shadow: -25px -25px 15px 15px  rgba(0, 0, 0, 0.65),inset -25px -25px 15px 15px gold;
     }
     75% {
-        box-shadow: -25px  25px 15px 15px  rgba(0, 0, 0, 0.65);
+        box-shadow: -25px  25px 15px 15px  rgba(0, 0, 0, 0.65) , inset -25px 25px 15px 15px gold;
     }
     100% {    
-        box-shadow:  25px  25px 15px 15px  rgba(0, 0, 0, 0.65);
+        box-shadow:  25px  25px 15px 15px  rgba(0, 0, 0, 0.65), inset 25px 25px 15px 15px gold;
     }
 }
 
